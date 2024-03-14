@@ -1,23 +1,15 @@
 // Express web app instance
 const express = require('express');
-
-// Parse request body to JSON
 const bodyParser = require('body-parser');
-
-// For File I/O
 const path = require('path');
-
-// For web routing
 const webRoute = require('./routes/web');
-
-// Make mock database (raw .json file) available globally in app
 global.mockDb = require(path.join(__dirname, './data/mock_db.json'));
 
 const app = express();
 
 // Set the view engine for web routes
 app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'views')); // Set the views directory
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(bodyParser.json());
 
@@ -27,6 +19,25 @@ app.use('/js', express.static('public/js'));
 
 // Use web routes
 app.use('/', webRoute);
+
+// Here's the added code for the /recipes route handler
+const mockDb = require('./data/mock_db.json'); // Adjust the path as per your project structure
+
+app.get('/recipes', (req, res) => {
+    // Retrieve recipes data
+    const recipesData = mockDb.recipes; // Access the recipes array directly from mockDb
+
+    // Check if recipesData is defined and is an array
+    if (!Array.isArray(recipesData)) {
+        console.error('recipesData is not an array:', recipesData);
+        // Handle the error appropriately
+        return res.status(500).send('Server Error: Unable to retrieve recipes.');
+    }
+
+    // Render the view and pass the recipes data to it
+    res.render('home/index', { recipes: recipesData });
+});
+
 
 const port = 3000;
 app.listen(port, () => console.log(`Server running on port ${port}`));

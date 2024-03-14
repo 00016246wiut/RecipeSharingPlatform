@@ -1,1 +1,16 @@
-[]
+[
+    {
+      "id": "1",
+      "name": "Chocolate Cake",
+      "ingredients": ["Flour", "Sugar", "Cocoa Powder"],
+      "instructions": "Mix ingredients and bake.",
+      "steps": ["Preheat oven to 350F", "Mix ingredients", "Bake for 30 minutes"]
+    },
+    {
+      "id": "2",
+      "name": "Pasta Carbonara",
+      "ingredients": ["Pasta", "Eggs", "Bacon"],
+      "instructions": "Cook pasta and mix with eggs and bacon.",
+      "steps": ["Preheat oven to 350F", "Mix ingredients", "Bake for 30 minutes"]
+    }
+]

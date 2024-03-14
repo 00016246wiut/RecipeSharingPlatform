@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1=title
+  form(method='POST' action='/recipes/create')
+    .form-group
+      label(for='name') Recipe Name:
+      input#name.form-control(type='text' name='name' required)
+    .form-group
+      label(for='ingredients') Ingredients:
+      textarea#ingredients.form-control(name='ingredients' required)
+    .form-group
+      label(for='instructions') Instructions:
+      textarea#instructions.form-control(name='instructions' required)
+    button.btn.btn-primary(type='submit') Submit
