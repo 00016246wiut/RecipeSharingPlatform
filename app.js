@@ -38,6 +38,14 @@ app.get('/recipes', (req, res) => {
     res.render('home/index', { recipes: recipesData });
 });
 
+const methodOverride = require('method-override');
+
+// ... other app setup ...
+
+// Use methodOverride with a query value
+app.use(methodOverride('_method'));
+
+
 
 const port = 3000;
 app.listen(port, () => console.log(`Server running on port ${port}`));

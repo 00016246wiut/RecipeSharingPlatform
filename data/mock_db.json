@@ -1,16 +1,65 @@
 [
-    {
-      "id": "1",
-      "name": "Chocolate Cake",
-      "ingredients": ["Flour", "Sugar", "Cocoa Powder"],
-      "instructions": "Mix ingredients and bake.",
-      "steps": ["Preheat oven to 350F", "Mix ingredients", "Bake for 30 minutes"]
-    },
-    {
-      "id": "2",
-      "name": "Pasta Carbonara",
-      "ingredients": ["Pasta", "Eggs", "Bacon"],
-      "instructions": "Cook pasta and mix with eggs and bacon.",
-      "steps": ["Preheat oven to 350F", "Mix ingredients", "Bake for 30 minutes"]
-    }
+  {
+    "id": "1",
+    "name": "Chocolate Cake",
+    "ingredients": [
+      "Flour",
+      "Sugar",
+      "Cocoa Powder"
+    ],
+    "instructions": "Mix ingredients and bake.",
+    "steps": [
+      "Preheat oven to 350F",
+      "Mix ingredients",
+      "Bake for 30 minutes"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Pasta Carbonara",
+    "ingredients": [
+      "Pasta",
+      "Eggs",
+      "Bacon"
+    ],
+    "instructions": "Cook pasta and mix with eggs and bacon.",
+    "steps": [
+      "Preheat oven to 350F",
+      "Mix ingredients",
+      "Bake for 30 minutes"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Palov",
+    "ingredients": [
+      "Rice",
+      "Eggs",
+      "Carrot"
+    ],
+    "instructions": "Cook the rice along with carrots",
+    "steps": [
+      "Preheat oven to 350F",
+      "Mix carrots to the rice",
+      "Bake for an hour"
+    ]
+  },
+  {
+    "id": "32876921-bce8-4f63-8806-8fc45a811844"
+  },
+  {
+    "id": "a8d2749a-4f46-4be3-b7fc-199cf5352e91"
+  },
+  {
+    "id": "83fa3d68-22c6-4c09-8918-9d3b1a5e4376"
+  },
+  {
+    "id": "f776756d-ac97-4593-9cea-3ab8c83f20ed"
+  },
+  {
+    "id": "e555923c-f4f0-46b3-918f-aa073c26c47f"
+  },
+  {
+    "id": "13f772a9-570d-4e22-afcb-395b60a46ef9"
+  }
 ]

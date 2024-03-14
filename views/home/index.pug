@@ -1,5 +1,6 @@
 include ../head.pug
 body
+  p This web application was created to fulfill Web Technology module’s requirements and does not represent an actual company or service
   .container.mt-5
     h1 List of Recipes
     // Filter options
@@ -32,7 +33,9 @@ body
             td= recipe.steps ? recipe.steps.join(', ') : ''
             td
               a.btn.btn-primary.btn-sm(href=`/recipes/${recipe.id}/edit`) Edit
-              form(action=`/recipes/${recipe.id}?_method=DELETE`, method="POST")
+              // Update the form to include the hidden input for method override
+              form(action=`/recipes/${recipe.id}`, method="POST")
+                input(type="hidden" name="_method" value="DELETE")
                 button.btn.btn-danger.btn-sm(type="submit") Delete
     // Button to add new recipe
     a.btn.btn-success(href="/recipes/new") Add New Recipe
